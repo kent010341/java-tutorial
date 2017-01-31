@@ -1,123 +1,133 @@
 <html>
-<head>
-<title>Java</title>
-</head>
-<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
-<body>
-<h1><a name="title"><img src="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png"width="43" height="80"></a></h1>
-
-<br>
-
-<style>
-p.pos_fixed
-{
-	position:fixed;
-	bottom:5px;
-	right:5px;
-}
-</style>
-<p class="pos_fixed"><a href="#title"><img src="http://comic.qq.com/images/comic/2008/01/02/april/tsj/016.gif"width="43" height="43"></a></p>
-
-<table border=1 width="500">
-<td><b>目錄</b>
-<ul>
-<li><a href="#a" STYLE="text-decoration:none">簡介</a>
-<ul><li><a href="#a0" STYLE="text-decoration:none">安裝</a>
-	<li><a href="#a1" STYLE="text-decoration:none">建立專案</a>
-</ul>
-<li>Hello, World!
-<ul><li><a href="#b1" STYLE="text-decoration:none">基本輸出</a>
-</ul>
-<li><a href="#c0" STYLE="text-decoration:none">變數類型</a>
-<ul><li><a href="#c1" STYLE="text-decoration:none">全域變數</a>
-	<li><a href="#c2" STYLE="text-decoration:none">局域變數</a>
-</ul>
-<li><a href="#d0" STYLE="text-decoration:none">運算子</a>
-<ul><li><a href="#d1" STYLE="text-decoration:none">算術運算子</a>
-	<li><a href="#d2" STYLE="text-decoration:none">邏輯運算子</a>
-</ul>
-<li><a href="#e0" STYLE="text-decoration:none">基本輸入</a>
-<ul><li><a href="#e1" STYLE="text-decoration:none">Scanner</a>
-</ul>
-<li><a href="#f0" STYLE="text-decoration:none">條件式</a>
-<ul><li><a href="#f1" STYLE="text-decoration:none">if, else, else if</a>
-	<li><a href="#f2" STYLE="text-decoration:none">switch</a>
-</ul>
-<li><a href="#g0" STYLE="text-decoration:none">迴圈式</a>
-<ul><li><a href="#g1" STYLE="text-decoration:none">for</a>
-	<li><a href="#g2" STYLE="text-decoration:none">while, do-while</a>
-    <li><a href="#g3" STYLE="text-decoration:none">無窮迴圈</a>
-    <li><a href="#g4" STYLE="text-decoration:none">break, continue</a>
-</ul>
-<li><a href="#h0" STYLE="text-decoration:none">模糊化程式設計－方法（Method）</a>
-<ul><li><a href="#h1" STYLE="text-decoration:none">建立方法</a>
-	<ul><li><a href="#h1a" STYLE="text-decoration:none">return</a></ul>
-	<li><a href="#h2" STYLE="text-decoration:none">呼叫方法</a>
-</ul>
-<li><a href="#i0" STYLE="text-decoration:none">字串（String）</a>
-<ul><li><a href="#i1" STYLE="text-decoration:none">字串方法</a>
-	<li><a href="#i2" STYLE="text-decoration:none">字串緩衝器（StringBuffer）</a>
-</ul>
-<li><a href="#j0" STYLE="text-decoration:none">陣列（Array）</a>
-<ul><li><a href="#j1" STYLE="text-decoration:none">宣告</a>
-	<li><a href="#j2" STYLE="text-decoration:none">一維、二維陣列</a>
-</ul>
-<li><a href="#k0" STYLE="text-decoration:none">類別（Class）－基礎</a>
-<ul><li><a href="#k1" STYLE="text-decoration:none">成員變數、成員方法</a>
-    <li><a href="#k2" STYLE="text-decoration:none">使用類別</a>
-	<li><a href="#k3" STYLE="text-decoration:none">資訊隱藏（Private）、資訊公開（Public）</a>
-	<li><a href="#k4" STYLE="text-decoration:none">過載（Overload）</a>
-    <li><a href="#k5" STYLE="text-decoration:none">this</a>
-</ul>
-<li><a href="#l0" STYLE="text-decoration:none">類別（Class）－進階</a>
-<ul><li><a href="#l1" STYLE="text-decoration:none">繼承（Inheritance）</a>
-    <li><a href="#l2" STYLE="text-decoration:none">抽象（abstract）</a>
-	<li><a href="#l3" STYLE="text-decoration:none">多形（Polymorphism）</a>
-    <li><a href="#l4" STYLE="text-decoration:none">巢狀類別</a>
-    <li><a href="#l5" STYLE="text-decoration:none">介面（Interface）</a>
-    <li><a href="#l6" STYLE="text-decoration:none">套件（API）</a>
-</ul>
-<li><a href="#m0" STYLE="text-decoration:none">例外處理（Exception）</a>
-<ul><li><a href="#m1" STYLE="text-decoration:none">try, catch, finally</a>
-    <li><a href="#m2" STYLE="text-decoration:none">內建例外</a>
-	<li><a href="#m3" STYLE="text-decoration:none">自訂例外</a>
-</ul>
-<!--20161214 Week10-->
-<li><a href="#n0" STYLE="text-decoration:none">視窗程式設計</a>
-<ul><li><a href="#n1" STYLE="text-decoration:none">傾聽者（Listener）</a>
-</ul>
-<li><a href="#n0" STYLE="text-decoration:none">視窗程式設計－低階事件</a>
-<ul><li><a href="#n1" STYLE="text-decoration:none">滑鼠事件</a>
-    <li><a href="#n2" STYLE="text-decoration:none">鍵盤事件</a>
-</ul>
-<li><a href="#o0" STYLE="text-decoration:none">視窗程式設計－語意事件</a>
-<ul><li><a href="#o1" STYLE="text-decoration:none">按鈕、文字 JButton, JLabel</a>
-	<li><a href="#o2" STYLE="text-decoration:none">選項鈕 JRadioButton</a>
-    <li><a href="#o3" STYLE="text-decoration:none">彈出式選單 JPopupMenu</a>
-    <li><a href="#o4" STYLE="text-decoration:none">下拉式選單 JMenuBar, JMenu, JMenuItem</a>
-</ul>
-<li><a href="#p0" STYLE="text-decoration:none">檔案處理</a>
-<ul><li><a href="#p1" STYLE="text-decoration:none">檔案讀取與寫入</a>
-</ul>
-<li><a href="#q0" STYLE="text-decoration:none">繪圖與多媒體</a>
-<ul><li><a href="#q1" STYLE="text-decoration:none">基礎幾何圖形繪製與文字樣式</a>
-	<li><a href="#q2" STYLE="text-decoration:none">圖片的載入與顯示</a>
-    <li><a href="#q3" STYLE="text-decoration:none">Timer</a>
-</ul>
-<li><a href="#r0" STYLE="text-decoration:none">網路程式設計</a>
-<ul><li><a href="#r1" STYLE="text-decoration:none">Server與Client的互動</a>
-</ul>
-</ul></td></table><br>
-
-
-<div style="text-align:left;background-color:#FFE4E1;padding:5px;margin-bottom:5px;"><h2><a name="a">簡介</a></h2></div>
-<ul>
-<li><h3><a name='a0'>安裝</a></h3></li>
-<ol>
-
-</ol>
-
-<li><h3><a name='a1'>基礎概念</a></h3></li>
-
-</body>
+	<head>
+		<title>Java</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<h1><a name="title"><img src="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png"width="43" height="80"></a></h1>
+	
+		<br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="http://comic.qq.com/images/comic/2008/01/02/april/tsj/016.gif"width="43" height="43"></a></p>
+		
+		<table border=1 width="500">
+		<td><b>目錄</b>
+		<ul>
+		<li><a href="#a" STYLE="text-decoration:none"><b>簡介</b></a>
+		<ul>
+			<li>安裝
+			<li>建立專案
+		</ul>
+		<li><a href="#b1" STYLE="text-decoration:none"><b>Hello, World!</b></a>
+		<ul>
+			<li>基本輸出
+		</ul>
+		<li><a href="#c1" STYLE="text-decoration:none"><b>變數類型</b></a>
+		<ul>
+			<li>全域變數
+			<li>局域變數
+		</ul>
+		<li><a href="#d0" STYLE="text-decoration:none"><b>運算子</b></a>
+		<ul>
+			<li>算術運算子
+			<li>邏輯運算子
+		</ul>
+		<li><a href="#e0" STYLE="text-decoration:none"><b>基本輸入</b></a>
+		<ul>
+			<li>Scanner
+		</ul>
+		<li><a href="#f0" STYLE="text-decoration:none"><b>條件式</b></a>
+		<ul>
+			<li>if, else, else if
+			<li>switch
+		</ul>
+		<li><a href="#g0" STYLE="text-decoration:none"><b>迴圈式</b></a>
+		<ul>
+			<li>for
+			<li>while, do-while
+			<li>無窮迴圈
+			<li>break, continue
+		</ul>
+		<li><a href="#h0" STYLE="text-decoration:none"><b>模糊化程式設計－方法（Method）</b></a>
+		<ul>
+			<li>建立方法
+			<ul>
+				<li>return
+			</ul>
+			<li>呼叫方法
+		</ul>
+		<li><a href="#i0" STYLE="text-decoration:none"><b>字串（String）</b></a>
+		<ul>
+			<li>字串方法
+			<li>字串緩衝器（StringBuffer）
+		</ul>
+		<li><a href="#j0" STYLE="text-decoration:none"><b>陣列（Array）</b></a>
+		<ul>
+			<li>宣告
+			<li>一維、二維陣列
+		</ul>
+		<li><a href="#k0" STYLE="text-decoration:none"><b>類別（Class）－基礎</b></a>
+		<ul>
+			<li>成員變數、成員方法
+			<li>使用類別
+			<li>資訊隱藏（Private）、資訊公開（Public）
+			<li>過載（Overload）
+			<li>this
+		</ul>
+		<li><a href="#l0" STYLE="text-decoration:none"><b>類別（Class）－進階</b></a>
+		<ul>
+			<li>繼承（Inheritance）
+			<li>抽象（abstract）
+			<li>多形（Polymorphism）
+			<li>巢狀類別
+			<li>介面（Interface）
+			<li>套件（API）
+		</ul>
+		<li><a href="#m0" STYLE="text-decoration:none"><b>例外處理（Exception）</b></a>
+		<ul>
+			<li>try, catch, finally
+			<li>內建例外
+			<li>自訂例外
+		</ul>
+		<!--20161214 Week10-->
+		<li><a href="#n0" STYLE="text-decoration:none"><b>視窗程式設計</b></a>
+		<ul>
+			<li>傾聽者（Listener）
+		</ul>
+		<li><a href="#n0" STYLE="text-decoration:none"><b>視窗程式設計－低階事件</b></a>
+		<ul>
+			<li>滑鼠事件
+			<li>鍵盤事件
+		</ul>
+		<li><a href="#o0" STYLE="text-decoration:none"><b>視窗程式設計－語意事件</b></a>
+		<ul>
+			<li>按鈕、文字 JButton, JLabel
+			<li>選項鈕 JRadioButton
+			<li>彈出式選單 JPopupMenu
+			<li>下拉式選單 JMenuBar, JMenu, JMenuItem
+		</ul>
+		<li><a href="#p0" STYLE="text-decoration:none"><b>檔案處理</b></a>
+		<ul>
+			<li>檔案讀取與寫入
+		</ul>
+		<li><a href="#q0" STYLE="text-decoration:none"><b>繪圖與多媒體</b></a>
+		<ul>
+			<li>基礎幾何圖形繪製與文字樣式
+			<li>圖片的載入與顯示
+			<li>Timer
+		</ul>
+		<li><a href="#r0" STYLE="text-decoration:none"><b>網路程式設計</b></a>
+		<ul>
+			<li>Server與Client的互動
+		</ul>
+		</ul></td></table><br>
+	</body>
 </html>
