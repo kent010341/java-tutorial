@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<title>Java</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<h1><a href="index.html" name="title"><img src="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png"width="43" height="80"></a></h1>
+	
+		<br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="http://comic.qq.com/images/comic/2008/01/02/april/tsj/016.gif"width="43" height="43"></a></p>
+		
+		<table border=1 width="500">
+		<td><b>目錄</b>
+		<ul>
+		<li><a href="abstract.html" STYLE="text-decoration:none"><b>簡介</b></a>
+		<ul>
+			<li>安裝
+			<li>建立專案
+		</ul>
+		<li><a href="hello-world.html" STYLE="text-decoration:none"><b>Hello, World!</b></a>
+		<ul>
+			<li>基本輸出
+		</ul>
+		<li><a href="variable.html" STYLE="text-decoration:none"><b>變數類型</b></a>
+		<ul>
+			<li>全域變數
+			<li>局域變數
+		</ul>
+		<li><a href="operator.html" STYLE="text-decoration:none"><b>運算子</b></a>
+		<ul>
+			<li>算術運算子
+			<li>邏輯運算子
+		</ul>
+		<li><a href="variable-method.html" STYLE="text-decoration:none"><b>常用變數方法</b></a>
+		<ul>
+			<li>隨機、次方
+			<li>轉型（變數互轉、字串與算術變數轉換）
+		</ul>
+		<li><a href="basic-input.html" STYLE="text-decoration:none"><b>基本輸入</b></a>
+		<ul>
+			<li>Scanner
+		</ul>
+		<li><a href="condition.html" STYLE="text-decoration:none"><b>條件式</b></a>
+		<ul>
+			<li>if, else, else if
+			<li>switch
+		</ul>
+		<li><a href="loop.html" STYLE="text-decoration:none"><b>迴圈式</b></a>
+		<ul>
+			<li>for
+			<li>while, do-while
+			<li>無窮迴圈
+			<li>break, continue
+		</ul>
+		<li><a href="method.html" STYLE="text-decoration:none"><b>模糊化程式設計－方法（Method）</b></a>
+		<ul>
+			<li>建立方法
+			<ul>
+				<li>return
+			</ul>
+			<li>呼叫方法
+		</ul>
+		<li><a href="string.html" STYLE="text-decoration:none"><b>字串（String）</b></a>
+		<ul>
+			<li>字串方法
+			<li>字串緩衝器（StringBuffer）
+		</ul>
+		<li><a href="array.html" STYLE="text-decoration:none"><b>陣列（Array）</b></a>
+		<ul>
+			<li>宣告
+			<li>一維、二維陣列
+		</ul>
+		<li><a href="basic-class.html" STYLE="text-decoration:none"><b>類別（Class）－基礎</b></a>
+		<ul>
+			<li>成員變數、成員方法
+			<li>使用類別
+			<li>資訊隱藏（Private）、資訊公開（Public）
+			<li>過載（Overload）
+			<li>this
+		</ul>
+		<li><a href="advanced-class.html" STYLE="text-decoration:none"><b>類別（Class）－進階</b></a>
+		<ul>
+			<li>繼承（Inheritance）
+			<li>抽象（abstract）
+			<li>多形（Polymorphism）
+			<li>巢狀類別
+			<li>介面（Interface）
+			<li>套件（API）
+		</ul>
+		<li><a href="exception.html" STYLE="text-decoration:none"><b>例外處理（Exception）</b></a>
+		<ul>
+			<li>try, catch, finally
+			<li>內建例外
+			<li>自訂例外
+		</ul>
+		<!--20161214 Week10-->
+		<li><a href="windows.html" STYLE="text-decoration:none"><b>視窗程式設計</b></a>
+		<ul>
+			<li>傾聽者（Listener）
+		</ul>
+		<li><a href="low-level.html" STYLE="text-decoration:none"><b>視窗程式設計－低階事件</b></a>
+		<ul>
+			<li>滑鼠事件
+			<li>鍵盤事件
+		</ul>
+		<li><a href="semantic.html" STYLE="text-decoration:none"><b>視窗程式設計－語意事件</b></a>
+		<ul>
+			<li>按鈕、文字 JButton, JLabel
+			<li>選項鈕 JRadioButton
+			<li>彈出式選單 JPopupMenu
+			<li>下拉式選單 JMenuBar, JMenu, JMenuItem
+		</ul>
+		<li><a href="file.html" STYLE="text-decoration:none"><b>檔案處理</b></a>
+		<ul>
+			<li>檔案讀取與寫入
+		</ul>
+		<li><a href="media.html" STYLE="text-decoration:none"><b>繪圖與多媒體</b></a>
+		<ul>
+			<li>基礎幾何圖形繪製與文字樣式
+			<li>圖片的載入與顯示
+			<li>Timer
+		</ul>
+		<li><a href="sever-client.html" STYLE="text-decoration:none"><b>網路程式設計</b></a>
+		<ul>
+			<li>Server與Client的互動
+		</ul>
+		</ul></td></table><br>
+		<hr>
+		<h3><b>條件式</b></h3>
+		在程式中，達成某條件才執行以下程式的用途非常廣，以下將會介紹if及else的用法。<br>
+		<ul>
+			<li><h4><b>if, else, else if</b></h4>
+				範例：<br><br>
+				<table width='700' border='1'>
+					<td align='center'><b>範例程式</b></td>
+					<td align='center'><b>第一輸入（x值）</b></td>
+					<td align='center'><b>第二輸入（y值）</b></td>
+					<td align='center'>輸出</td>
+					<tr>
+					<td rowspan='3'>
+						import java.util.Scanner;<br>
+						<br>
+						public class example{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner sc = new Scanner(System.in);<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x = sc.nextInt();<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int y = sc.nextInt();<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(x&lt;y){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x比y小");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(x&gt;y){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x比y大");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x等於y");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc.close();<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}<br>
+					</td>
+					<td align='center'>3</td><td align='center'>5</td><td align='center'>x比y小</td>
+					<tr>
+					<td align='center'>5</td><td align='center'>3</td><td align='center'>x比y大</td>
+					<tr>
+					<td align='center'>4</td><td align='center'>4</td><td align='center'>x等於y</td>
+				</table><br><br>
+				如以上範例，只要if後面的括號<b>達成條件（true）</b>，就會執行後面大括號中的程式。<br>
+				反之若<b>不達成條件（false）</b>，就不會執行後面大括號中的程式，且若其後還有else if的條件，就繼續判斷下一個條件是否達成。<br>
+				若if及else if的條件皆不成立，則執行else內的指令（如果有else的話）。<br><br>
+				備註：若執行的程式僅有一行，可省略大括號：<br><br>
+				<table width='500' border='1'>
+					<td>
+						if(a>b){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("a>b");<br>
+						}<br><br>
+					</td>
+					<td align='center'>等同</td>
+					<td>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(a>b)<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("a>b");<br>
+					</td>
+				</table>
+			</li><br>
+			<li><h4><b>switch</b></h4>
+				若需要對單一變數做多個比對時，可以使用switch，以下為範例：<br><br>
+				<table width='500' border='1'>
+					<td align='center'><b>範例程式</b></td>
+					<td align='center'><b>輸入（x值）</b></td>
+					<td align='center'>輸出</td>
+					<tr>
+					<td rowspan='4'>
+						import java.util.Scanner;<br>
+						<br>
+						public class example{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner sc = new Scanner(System.in);<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x = sc.nextInt();<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch(x){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 0:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x is 0");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x is 1");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x is 2");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 3:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("x is 3");<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc.close();<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}<br>
+					</td>
+					<td align='center'>0</td>
+					<td align='center'>x is 0</td>
+					<tr>
+					<td align='center'>1</td>
+					<td align='center'>x is 1</td>
+					<tr>
+					<td align='center'>2</td>
+					<td align='center'>x is 2</td>
+					<tr>
+					<td align='center'>3</td>
+					<td align='center'>x is 3</td>
+				</table><br><br>
+				如以上範例，switch後面的括號填入欲判斷的變數，<br>接著在大括號內以case和break依需求填入即可。
+			</li>
+		</ul>
+	</body>
+</html>
