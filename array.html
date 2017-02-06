@@ -134,7 +134,91 @@
 			<li>Server與Client的互動
 		</ul>
 		</ul></td></table><br>
-    <hr>
-    <h3><b>陣列（Array）</b></h3>
+		<hr>
+		<h3><b>陣列（Array）</b></h3>
+		當我們要儲存多個同型態的資料時，我們可以使用陣列（Array）。<br>
+		陣列的用途極廣，包括搭配迴圈化簡程式等，是程式設計中相當重要的一部份。<br>
+		<ul>
+			<li><h3><b>建立陣列</b></h3>
+				建立陣列非常簡單，以下為範例：<br><br>
+				<table width='300' border='1'>
+					<td>
+						int[] x = new int[5];<br>
+						int[] y = {53, 26, 37, 94};
+					</td>
+				</table><br>
+				<b>注意：</b>陣列的索引值從0開始。<br><br>
+				且若我們需要一個可以儲存<font color="red">n</font>個資料的陣列，習慣上我們會以下程式新增：<br><br>
+				<table width='300' border='1'>
+					<td>
+						int[] x = new int[<font color="red">n</font>];
+					</td>
+				</table><br>
+				而不是：<br><br>
+				<table width='300' border='1'>
+					<td>
+						int[] x = new int[<font color="red">n-1</font>];
+					</td>
+				</table><br>
+				這是因為我們需要一個<b>空白空間</b>放在陣列最後，因此習慣上雖然比需求多一格，但我們並不會去修改那一格。<br><br>
+				<h3>陣列使用範例</h3>
+				<table width='500' border='1'>
+					<td align='center'><b>程式</b></td>
+					<td align='center'><b>輸出</b></td>
+					<tr>
+					<td>
+						public class example{<br>>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[] x = new int[3];<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[0] = 32;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[1] = 57;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[2] = 43;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0;i&lt;=2;i++){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i] += 10;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(x[i]);<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}
+
+					</td>
+					<td align='center'>42<br>67<br>53</td>
+				</table><br>
+			</li>
+			<li><h3><b>二維陣列</b></h3>
+				上述的範例皆為一維陣列，接下來要介紹的是二維陣列，其宣告方式為：<br><br>
+				<table width='300' border='1'>
+					<td>
+						int[][] x = new int[5][2];<br>
+						int[][] y = {{37, 62}, {57, 94}, {45, 61}};
+					</td>
+				</table><br>
+				其使用方法與一維陣列雷同，可以<b>巢狀迴圈</b>搭配使用。<br><br>
+				甚至可以依需求增加至三維矩陣甚至是多維矩陣。<br>
+				<h3>二維陣列使用範例</h3>
+				<table width='500' border='1'>
+					<td align='center'><b>程式</b></td>
+					<td align='center'><b>輸出</b></td>
+					<tr>
+					<td>
+						public class example{<br>>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int[][] x = new int[3][2];<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[0][0] = 32; x[0][1] = 84;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[1][0] = 57; x[1][1] = 62;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[2][0] = 43; x[2][1] = 18;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0;i&lt;=2;i++){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j=0;j&lt;=1;j++){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i][j] += 10;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(x[i][j]);<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						}
+
+					</td>
+					<td align='center'>42<br>94<br>67<br>72<br>53<br>28</td>
+				</table><br>
+			</li>
+		</ul>
 	</body>
 </html>
