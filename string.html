@@ -134,7 +134,149 @@
 			<li>Server與Client的互動
 		</ul>
 		</ul></td></table><br>
-    <hr>
-    <h3><b>字串（String）</b></h3>
+		<hr>
+		<h3><b>字串（String）</b></h3>
+		此章節將會介紹字串的各種處理，由於字元處理在實務上較少使用，因此並不會講解。<br><br>
+		<ul>
+			<li><h3><b>宣告字串</b></h3>
+				宣告字串有多種方式：<br><br>
+				<table width="550" border="1">
+					<td align="center"><b>宣告方式</b></td>
+					<td align="center"><b>說明</b></td>
+					<tr>
+					<td>String x = new String();</td>
+					<td align="center">建立空字串</td>
+					<tr>
+					<td>String x = new String(String);</td>
+					<td align="center">使用""括起來的字串或其他字串物件來建立字串</td>
+					<tr>
+					<td>String x = String;</td>
+					<td align="center">與new String(String)相同功能</td>
+					<tr>
+					<td>String x = new String(char[]);</td>
+					<td align="center">使用字元陣列建立字串</td>
+					<tr>
+					<td>String x = new String(StringBuffer);</td>
+					<td align="center">使用字串緩衝區建立字串</td>
+				</table><br><br>
+				跟變數一樣，字串亦能在之後修改：<br><br>
+				<ul>
+					<li>String x = new String("Hello, World!");
+					<li>x = "Hello";
+				</ul><br>
+			</li>
+			<li><h3><b>字串方法</b></h3>
+				<table width="550" border="1">
+					<td align="center"><b>方法</b></td>
+					<td align="center"><b>功能</b></td>
+					<td align="center"><b>輸出型態</b></td>
+					<tr>
+					<td align="center">length()</td>
+					<td align="center">取得字串長度</td>
+					<td align="center">int</td>
+					<tr>
+					<td align="center">toLowerCase()</td>
+					<td align="center">將字串的英文字母轉換為小寫</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">toUpperCase()</td>
+					<td align="center">將字串的英文字母轉換為大寫</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">indexOf(T)</td>
+					<td align="center">第一次搜尋到參數T的位置，沒有<br>找到則回傳-1，T可為字元或字串</td>
+					<td align="center">int</td>
+					<tr>
+					<td align="center">indexOf(T, int)</td>
+					<td align="center">從int開始，第一次搜尋到參數T的位置。</td>
+					<td align="center">int</td>
+					<tr>
+					<td align="center">charAt(int)</td>
+					<td align="center">取得位置int的字元</td>
+					<td align="center">char</td>
+					<tr>
+					<td align="center">substring(int)</td>
+					<td align="center">從int開始取出剩下的字串</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">substring(int, int)</td>
+					<td align="center">取得從第一個int到第二個int位置間的字串</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">replace(char, char)</td>
+					<td align="center">將找到的第一個char取代成第二個char</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">concat(String)</td>
+					<td align="center">將參數字串加到String物件後面</td>
+					<td align="center">String</td>
+					<tr>
+					<td align="center">trim()</td>
+					<td align="center">刪除字串的空白字元</td>
+					<td align="center">String</td>
+				</table>
+			</li>
+			<li><h3><b>字串緩衝器（StringBuffer）</b></h3>
+				<ul>
+					<li><h3>建立</h3>
+						<table width="550" border="1">
+							<td align="center"><b>建立方法</b></td>
+							<td align="center"><b>說明</b></td>
+							<tr>
+							<td>StringBuffer x = new StringBuffer();</td>
+							<td align="center">建立容量16字元之空字串</td>
+							<tr>
+							<td>StringBuffer x = new StringBuffer(int);</td>
+							<td align="center">建立容量int字元之空字串</td>
+							<tr>
+							<td>StringBuffer x = new StringBuffer(String);</td>
+							<td align="center">
+								使用String字串物件建立字串緩衝區物<br>
+								件，容量為字串物件長度加16字元
+							</td>
+						</table>
+					</li>
+					<li><h3>方法</h3>
+						<table width="550" border="1">
+							<td align="center"><b>方法</b></td>
+							<td align="center"><b>功能</b></td>
+							<td align="center"><b>輸出型態</b></td>
+							<tr>
+							<td align="center">length()</td>
+							<td align="center">取得長度</td>
+							<td align="center">int</td>
+							<tr>
+							<td align="center">toString()</td>
+							<td align="center">將StringBuffer物件轉換成String物件</td>
+							<td align="center">String</td>
+							<tr>
+							<td align="center">append(T, [int, int])</td>
+							<td align="center">
+								將參數T轉換為字串並新增到StringBuffer的<br>
+								最後，其中第一個int參數為起始位置，第二<br>
+								個int為長度，T可以是各種型態
+							</td>
+							<td align="center">StringBuffer</td>
+							<tr>
+							<td align="center">reverse()</td>
+							<td align="center">反轉字元順序</td>
+							<td align="center">StringBuffer</td>
+							<tr>
+							<td align="center">insert(int, T, [int, int])</td>
+							<td align="center">同append()功能，但新增在第一個int位置</td>
+							<td align="center">StringBuffer</td>
+							<tr>
+							<td align="center">delete(int, int)</td>
+							<td align="center">刪除從第一個int到第二個int間的字元</td>
+							<td align="center">StringBuffer</td>
+							<tr>
+							<td align="center">replace(int, int, String)</td>
+							<td align="center">將第一個int到第二個int間的字元取代成String</td>
+							<td align="center">StringBuffer</td>
+						</table>
+					</li>
+				</ul>
+			</li>
+		</ul>
 	</body>
 </html>
