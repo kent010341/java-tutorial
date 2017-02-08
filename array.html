@@ -4,9 +4,34 @@
 	</head>
 	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
 	<body>
-		<h1><a href="index.html" name="title"><img src="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png"width="43" height="80"></a></h1>
-	
-		<br>
+		<div STYLE="position:fixed;background-color:gray">
+			<input type ="button" onclick="javascript:location.href='index.html'" value="回到首頁"></input>
+			<select onchange="location.href=this.options[this.selectedIndex].value">
+			<option value="index.html">首頁</option>
+			<option value="abstract.html">簡介</option>
+			<option value="hello-world.html">Hello, World!</option>
+			<option value="variable.html">變數類型</option>
+			<option value="operator.html">運算子</option>
+			<option value="variable-method.html">常用變數方法</option>
+			<option value="basic-input.html">基本輸入</option>
+			<option value="condition.html">條件式</option>
+			<option value="loop.html">迴圈式</option>
+			<option value="method.html">模糊化程式設計－方法（Method）</option>
+			<option value="string.html">字串（String）</option>
+			<option selected="true">陣列（Array）</option>
+			<option value="basic-class.html">類別（Class）－基礎</option>
+			<option value="advanced-class.html">類別（Class）－進階</option>
+			<option value="exception.html">例外處理（Exception）</option>
+			<option value="windows.html">視窗程式設計</option>
+			<option value="low-level.html">視窗程式設計－低階事件</option>
+			<option value="semantic.html">視窗程式設計－語意事件</option>
+			<option value="file.html">檔案處理</option>
+			<option value="media.html">繪圖與多媒體</option>
+			<option value="sever-client.html">網路程式設計</option>
+			</select>
+		</div>
+		<a name="title">.</a>
+		<br><br>
 			
 		<style>
 		p.pos_fixed
@@ -16,126 +41,10 @@
 			right:5px;
 		}
 		</style>
-		<p class="pos_fixed"><a href="#title"><img src="http://comic.qq.com/images/comic/2008/01/02/april/tsj/016.gif"width="43" height="43"></a></p>
+		<p class="pos_fixed"><a href="#title"><img src="img/home.png"width="43" height="43"></a></p>
 		
-		<table border=1 width="500">
-		<td><b>目錄</b>
-		<ul>
-		<li><a href="abstract.html" STYLE="text-decoration:none"><b>簡介</b></a>
-		<ul>
-			<li>安裝
-			<li>建立專案
-		</ul>
-		<li><a href="hello-world.html" STYLE="text-decoration:none"><b>Hello, World!</b></a>
-		<ul>
-			<li>基本輸出
-		</ul>
-		<li><a href="variable.html" STYLE="text-decoration:none"><b>變數類型</b></a>
-		<ul>
-			<li>全域變數
-			<li>局域變數
-		</ul>
-		<li><a href="operator.html" STYLE="text-decoration:none"><b>運算子</b></a>
-		<ul>
-			<li>算術運算子
-			<li>邏輯運算子
-		</ul>
-		<li><a href="variable-method.html" STYLE="text-decoration:none"><b>常用變數方法</b></a>
-		<ul>
-			<li>隨機、次方
-			<li>轉型（變數互轉、字串與算術變數轉換）
-		</ul>
-		<li><a href="basic-input.html" STYLE="text-decoration:none"><b>基本輸入</b></a>
-		<ul>
-			<li>Scanner
-		</ul>
-		<li><a href="condition.html" STYLE="text-decoration:none"><b>條件式</b></a>
-		<ul>
-			<li>if, else, else if
-			<li>switch
-		</ul>
-		<li><a href="loop.html" STYLE="text-decoration:none"><b>迴圈式</b></a>
-		<ul>
-			<li>for
-			<li>while, do-while
-			<li>無窮迴圈
-			<li>break, continue
-		</ul>
-		<li><a href="method.html" STYLE="text-decoration:none"><b>模糊化程式設計－方法（Method）</b></a>
-		<ul>
-			<li>建立方法
-			<ul>
-				<li>return
-			</ul>
-			<li>呼叫方法
-		</ul>
-		<li><a href="string.html" STYLE="text-decoration:none"><b>字串（String）</b></a>
-		<ul>
-			<li>字串方法
-			<li>字串緩衝器（StringBuffer）
-		</ul>
-		<li><a href="array.html" STYLE="text-decoration:none"><b>陣列（Array）</b></a>
-		<ul>
-			<li>宣告
-			<li>一維、二維陣列
-		</ul>
-		<li><a href="basic-class.html" STYLE="text-decoration:none"><b>類別（Class）－基礎</b></a>
-		<ul>
-			<li>成員變數、成員方法
-			<li>使用類別
-			<li>資訊隱藏（Private）、資訊公開（Public）
-			<li>過載（Overload）
-			<li>this
-		</ul>
-		<li><a href="advanced-class.html" STYLE="text-decoration:none"><b>類別（Class）－進階</b></a>
-		<ul>
-			<li>繼承（Inheritance）
-			<li>抽象（abstract）
-			<li>多形（Polymorphism）
-			<li>巢狀類別
-			<li>介面（Interface）
-			<li>套件（API）
-		</ul>
-		<li><a href="exception.html" STYLE="text-decoration:none"><b>例外處理（Exception）</b></a>
-		<ul>
-			<li>try, catch, finally
-			<li>內建例外
-			<li>自訂例外
-		</ul>
-		<!--20161214 Week10-->
-		<li><a href="windows.html" STYLE="text-decoration:none"><b>視窗程式設計</b></a>
-		<ul>
-			<li>傾聽者（Listener）
-		</ul>
-		<li><a href="low-level.html" STYLE="text-decoration:none"><b>視窗程式設計－低階事件</b></a>
-		<ul>
-			<li>滑鼠事件
-			<li>鍵盤事件
-		</ul>
-		<li><a href="semantic.html" STYLE="text-decoration:none"><b>視窗程式設計－語意事件</b></a>
-		<ul>
-			<li>按鈕、文字 JButton, JLabel
-			<li>選項鈕 JRadioButton
-			<li>彈出式選單 JPopupMenu
-			<li>下拉式選單 JMenuBar, JMenu, JMenuItem
-		</ul>
-		<li><a href="file.html" STYLE="text-decoration:none"><b>檔案處理</b></a>
-		<ul>
-			<li>檔案讀取與寫入
-		</ul>
-		<li><a href="media.html" STYLE="text-decoration:none"><b>繪圖與多媒體</b></a>
-		<ul>
-			<li>基礎幾何圖形繪製與文字樣式
-			<li>圖片的載入與顯示
-			<li>Timer
-		</ul>
-		<li><a href="sever-client.html" STYLE="text-decoration:none"><b>網路程式設計</b></a>
-		<ul>
-			<li>Server與Client的互動
-		</ul>
-		</ul></td></table><br>
 		<hr>
-		<h3><b>陣列（Array）</b></h3>
+		<h2><b>陣列（Array）</b></h2>
 		當我們要儲存多個同型態的資料時，我們可以使用陣列（Array）。<br>
 		陣列的用途極廣，包括搭配迴圈化簡程式等，是程式設計中相當重要的一部份。<br>
 		<ul>
