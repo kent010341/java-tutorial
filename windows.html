@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>Java學習筆記－視窗程式設計</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<div STYLE="position:fixed;background-color:gray">
+			<input type ="button" onclick="javascript:location.href='index.html'" value="回到首頁"></input>
+			<select onchange="location.href=this.options[this.selectedIndex].value">
+			<option value="index.html">首頁</option>
+			<option value="abstract.html">簡介</option>
+			<option value="hello-world.html">Hello, World!</option>
+			<option value="variable.html">變數類型</option>
+			<option value="operator.html">運算子</option>
+			<option value="variable-method.html">常用變數方法</option>
+			<option value="basic-input.html">基本輸入</option>
+			<option value="condition.html">條件式</option>
+			<option value="loop.html">迴圈式</option>
+			<option value="method.html">模糊化程式設計－方法（Method）</option>
+			<option value="string.html">字串（String）</option>
+			<option value="array.html">陣列（Array）</option>
+			<option value="basic-class.html">類別（Class）－基礎</option>
+			<option value="advanced-class.html">類別（Class）－進階</option>
+			<option value="exception.html">例外處理（Exception）</option>
+			<option selected="true">視窗程式設計</option>
+			<option value="low-level.html">視窗程式設計－低階事件</option>
+			<option value="semantic.html">視窗程式設計－語意事件</option>
+			<option value="file.html">檔案處理</option>
+			<option value="media.html">繪圖與多媒體</option>
+			<option value="sever-client.html">網路程式設計</option>
+			</select>
+		</div>
+		<a name="title">.</a>
+		<br><br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="img/home.png"width="43" height="43"></a></p>
+		
+		<hr>
+		
+		<h2><b>視窗程式設計</b></h2>
+		在接下來的多個章節中會介紹視窗程式設計的方法，因此本章節僅作簡介用，詳細事件處理請至下一章節。<br><br>
+		在java程式使用Swing或AWT元件建立的圖形使用介面為一種事件驅動程式設計（Event-driven Programming），程式碼的主要目的是回應或處理使用者的操作。<br><br>
+		例如鍵盤輸入、滑鼠移動、點按等，程式的執行流程視使用者的操作而定。<br><br>
+		java JDK 1.1版的事件處理是一種「委託事件處理模型」（Delegation Event Model），分為「事件來源（Event Sourse）」和處理事件的「傾聽者（Listener）」物件。<br><br>
+		一旦類別新增為傾聽者，該類別需要實作傾聽者介面的所有方法。<br>
+		以下稍微列出傾聽者介面的列表：<br><br>
+		<table width='550' border='1'>
+			<td align='center'><b>傾聽者介面</b></td>
+			<td align='center'><b>方法</b></td>
+			<tr>
+			<td align='center'>ActionListener</td>
+			<td align='center'>actionPerformed(ActionEvent evt)</td>
+			<tr>
+			<td align='center'>ListSelectionListener</td>
+			<td align='center'>valueChanged(ListSelectionEvent evt)</td>
+			<tr>
+			<td align='center'>AdjustmentListener</td>
+			<td align='center'>adjustmentValueChanged(AdjustmentEvent evt)</td>
+			<tr>
+			<td align='center'>ChangeListener</td>
+			<td align='center'>stateChanged(ChangeEvent evt)</td>
+			<tr>
+			<td align='center'>ComponentListener</td>
+			<td align='center'>
+				componentHidden(ComponentEvent evt)<br>
+				componentMoved(ComponentEvent evt)<br>
+				componentResized(ComponentEvent evt)<br>
+				componentShown(ComponentEvent evt)
+			</td>
+			<tr>
+			<td align='center'>ContainerListener</td>
+			<td align='center'>
+				componentAdded(ContainerEvent evt)<br>
+				componentRemoved(ContainerEvent evt)
+			</td>
+			<tr>
+			<td align='center'>FocusListener</td>
+			<td align='center'>
+				focusGained(FocusEvent evt)<br>
+				focusLost(FocusEvent evt)
+			</td>
+			<tr>
+			<td align='center'>ItemListener</td>
+			<td align='center'>itemStateChanged(ItemEvent evt)</td>
+			<tr>
+			<td align='center'>KeyListener</td>
+			<td align='center'>
+				keyPressed(KeyEvent evt)<br>
+				keyReleased(KeyEvent evt)<br>
+				keyTyped(KeyEvent evt)
+			</td>
+			<tr>
+			<td align='center'>MouseMotionListener</td>
+			<td align='center'>
+				mouseClicked(MouseEvent evt)<br>
+				mousePressed(MouseEvent evt)<br>
+				mouseReleased(MouseEvent evt)<br>
+				mouseEntered(MouseEvent evt)<br>
+				mouseExited(MouseEvent evt)
+			</td>
+			<tr>
+			<td align='center'>WindowListener</td>
+			<td align='center'>
+				windowActivated(WindowEvent evt)<br>
+				windowDeactivated(WindowEvent evt)<br>
+				windowOpened(WindowEvent evt)<br>
+				windowClosed(WindowEvent evt)<br>
+				windowClosing(WindowEvent evt)<br>
+				windowIconified(WindowEvent evt)<br>
+				windowDeiconified(WindowEvent evt)
+			</td>
+		</table>
+	</body>
+</html>
