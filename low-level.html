@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>Java學習筆記－低階事件</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<div STYLE="position:fixed;background-color:gray">
+			<input type ="button" onclick="javascript:location.href='index.html'" value="回到首頁"></input>
+			<select onchange="location.href=this.options[this.selectedIndex].value">
+			<option value="index.html">首頁</option>
+			<option value="abstract.html">簡介</option>
+			<option value="hello-world.html">Hello, World!</option>
+			<option value="variable.html">變數類型</option>
+			<option value="operator.html">運算子</option>
+			<option value="variable-method.html">常用變數方法</option>
+			<option value="basic-input.html">基本輸入</option>
+			<option value="condition.html">條件式</option>
+			<option value="loop.html">迴圈式</option>
+			<option value="method.html">模糊化程式設計－方法（Method）</option>
+			<option value="string.html">字串（String）</option>
+			<option value="array.html">陣列（Array）</option>
+			<option value="basic-class.html">類別（Class）－基礎</option>
+			<option value="advanced-class.html">類別（Class）－進階</option>
+			<option value="exception.html">例外處理（Exception）</option>
+			<option value="windows.html">視窗程式設計</option>
+			<option selected="true">視窗程式設計－低階事件</option>
+			<option value="semantic.html">視窗程式設計－語意事件</option>
+			<option value="file.html">檔案處理</option>
+			<option value="media.html">繪圖與多媒體</option>
+			<option value="sever-client.html">網路程式設計</option>
+			</select>
+		</div>
+		<a name="title">.</a>
+		<br><br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="img/home.png"width="43" height="43"></a></p>
+		
+		<hr>
+		
+		<h2><b>視窗程式設計－低階事件</b></h2>
+		低階事件是一些基本輸入和視窗操作等相關的事件，其說明如下：<br><br>
+		<table width='550' border='1'>
+			<td align='center'><b>事件物件名稱</b></td>
+			<td align='center'><b>產生事件的原因</b></td>
+			<tr>
+			<td align='center'>ComponentEvent</td>
+			<td align='center'>當隱藏、移動、顯示和調整元件尺寸時</td>
+			<tr>
+			<td align='center'>ContainerEvent</td>
+			<td align='center'>新增或刪除元件時</td>
+			<tr>
+			<td align='center'>FocusEvent</td>
+			<td align='center'>當元件取得或失去焦點時</td>
+			<tr>
+			<td align='center'>KeyEvent</td>
+			<td align='center'>鍵盤按鍵按下、鬆開、輸入字元時</td>
+			<tr>
+			<td align='center'>MouseEvent</td>
+			<td align='center'>滑鼠在元件上按一下、拖曳、移動、進入、離開、按下、鬆開時</td>
+			<tr>
+			<td align='center'>WindowEvent</td>
+			<td align='center'>視窗操作的開啟、關閉；縮小化等操作</td>
+			<tr>
+			<td align='center'>PaintEvent</td>
+			<td align='center'>繪圖相關的操作</td>
+			<tr>
+			<td align='center'>InputEvent</td>
+			<td align='center'>KeyEvent和MouseEvent的父抽象類別</td>
+		</table><br><br>
+		「事件來源」是指哪一個物件產生此事件，以下為低階事件的來源類別：<br><br>
+		<table width='550' border='1'>
+			<td align='center'><b>事件來源類別</b></td>
+			<td align='center'><b>產生的事件</b></td>
+			<td align='center'><b>事件傾聽者</b></td>
+			<tr>
+			<td align='center' rowspan='4'>Component</td>
+			<td align='center'>ComponentEvent</td>
+			<td align='center'>ComponentListener</td>
+			<tr>
+			<td align='center'>FocusEvent</td>
+			<td align='center'>FocusListener</td>
+			<tr>
+			<td align='center'>KeyEvent</td>
+			<td align='center'>KeyListener</td>
+			<tr>
+			<td align='center'>MouseEvent</td>
+			<td align='center'>
+				MouseListener<br>
+				MouseMotionListener
+			</td>
+			<tr>
+			<td align='center'>Container</td>
+			<td align='center'>ContainerEvent</td>
+			<td align='center'>ContainerListener</td>
+			<tr>
+			<td align='center'>Window</td>
+			<td align='center'>WindowEvent</td>
+			<td align='center'>WindowListener</td>
+		</table>
+		一旦類別被新增為傾聽者，該類別必須實作傾聽者介面的所有方法。<br><br>
+		傾聽者介面請參考<a href="windows.html" STYLE="text-decoration:none"><b>上一章節</b></a><br><br>
+		<hr>
+		<h3>範例：</h3>
+		<ul>
+			<li><h3>基本滑鼠事件處理範例</h3>
+				<img src="img/basic-mouseEvent.png" STYLE="widt:90%;height:90%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li>滑鼠未移入框中：<br><br>
+						<img src="img/basic-mouseEvent-exited.png" STYLE="widt:10%;height:10%"><br><br>
+					<li>滑鼠移入框中：<br><br>
+						<img src="img/basic-mouseEvent-entered.png" STYLE="widt:10%;height:10%"><br><br>
+					<li>滑鼠點擊框：<br><br>
+						<img src="img/basic-mouseEvent-pressed.png" STYLE="widt:10%;height:10%"><br><br>
+				</ul>
+			</li>
+			<li><h3>滑鼠拖曳事件處理</h3>
+				<img src="img/drag-mouseEvent.png" STYLE="widt:92%;height:92%"><br><br>
+				<b>輸出：</b><br><br>
+				<img src="img/drag-mouseEvent-result.png" STYLE="widt:50%;height:50%"><br><br>
+			</li>
+		</ul>
+	</body>
+</html>
