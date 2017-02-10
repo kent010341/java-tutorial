@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Java學習筆記－檔案處理</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<div STYLE="position:fixed;background-color:gray">
+			<input type ="button" onclick="javascript:location.href='index.html'" value="回到首頁"></input>
+			<select onchange="location.href=this.options[this.selectedIndex].value">
+			<option value="index.html">首頁</option>
+			<option value="abstract.html">簡介</option>
+			<option value="hello-world.html">Hello, World!</option>
+			<option value="variable.html">變數類型</option>
+			<option value="operator.html">運算子</option>
+			<option value="variable-method.html">常用變數方法</option>
+			<option value="basic-input.html">基本輸入</option>
+			<option value="condition.html">條件式</option>
+			<option value="loop.html">迴圈式</option>
+			<option value="method.html">模糊化程式設計－方法（Method）</option>
+			<option value="string.html">字串（String）</option>
+			<option value="array.html">陣列（Array）</option>
+			<option value="basic-class.html">類別（Class）－基礎</option>
+			<option value="advanced-class.html">類別（Class）－進階</option>
+			<option value="exception.html">例外處理（Exception）</option>
+			<option value="windows.html">視窗程式設計</option>
+			<option value="low-level.html">視窗程式設計－低階事件</option>
+			<option value="semantic.html">視窗程式設計－語意事件</option>
+			<option selected="true">檔案處理</option>
+			<option value="media.html">繪圖與多媒體</option>
+			<option value="sever-client.html">網路程式設計</option>
+			</select>
+		</div>
+		<a name="title">.</a>
+		<br><br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="img/home.png"width="43" height="43"></a></p>
+		
+		<hr>
+		
+		<h2><b>檔案處理</b></h2>
+		java的輸入輸出串流：<br>
+		<ul>
+			<li><h3>輸出</h3>
+				BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));<br><br>
+				<table width='500' border='1'>
+					<td align='center'><b>方法型態</b></td>
+					<td align='center'><b>方法</b></td>
+					<td align='center'><b>說明</b></td>
+					<tr>
+					<td align='center'>void</td>
+					<td align='center'>write(String)</td>
+					<td align='center'>寫入一個字串</td>
+					<tr>
+					<td align='center'>void</td>
+					<td align='center'>flush()</td>
+					<td align='center'>清除串流內容</td>
+					<tr>
+					<td align='center'>void</td>
+					<td align='center'>close()</td>
+					<td align='center'>關閉串流</td>
+				</table>
+			</li>
+			<li><h3>輸入</h3>
+				BufferedReader input = new BufferedReader(new InputStreamReader(System.in));<br><br>
+				<table width='500' border='1'>
+					<td align='center'><b>方法型態</b></td>
+					<td align='center'><b>方法</b></td>
+					<td align='center'><b>說明</b></td>
+					<tr>
+					<td align='center'>String</td>
+					<td align='center'>readLine()</td>
+					<td align='center'>讀取一行文字內容的字串</td>
+					<tr>
+					<td align='center'>void</td>
+					<td align='center'>close()</td>
+					<td align='center'>關閉串流</td>
+				</table>
+			</li>
+		</ul>
+		<hr>
+		<h3>範例：</h3>
+		<ul>
+			<li><h3>java的輸入/輸出串流（功能類似Scanner）</h3>
+				<img src="img/java-inputoutput.png" STYLE="widt:50%;height:50%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li><b>初始文字</b><br><br>
+						請輸入資料：<br><br>
+					<li><b>輸入資料「123」</b><br><br>
+						請輸入資料：123<br>輸入的資料是：123<br><br>
+				</ul>
+			</li>
+			<li><h3>檔案的讀取與寫入</h3>
+				<img src="img/file-inputoutput.png" STYLE="widt:60%;height:60%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li><b>文字</b><br><br>
+						寫入完成<br>
+						檔案：D://InputOutputTest.txt<br>
+						測試輸入文字1測試輸入文字2<br><br>
+					<li><b>D://InputOutputTest.txt</b><br><br>
+						<img src="img/file-inputoutput-txt.png" STYLE="widt:40%;height:40%"><br><br>
+				</ul>
+			</li>
+			</ul>
+	</body>
+</html>
