@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>Java學習筆記－語意事件</title>
+	</head>
+	<link rel="icon" href="http://logodatabases.com/wp-content/uploads/2012/03/java-icon.png" type="image/x-icon">
+	<body>
+		<div STYLE="position:fixed;background-color:gray">
+			<input type ="button" onclick="javascript:location.href='index.html'" value="回到首頁"></input>
+			<select onchange="location.href=this.options[this.selectedIndex].value">
+			<option value="index.html">首頁</option>
+			<option value="abstract.html">簡介</option>
+			<option value="hello-world.html">Hello, World!</option>
+			<option value="variable.html">變數類型</option>
+			<option value="operator.html">運算子</option>
+			<option value="variable-method.html">常用變數方法</option>
+			<option value="basic-input.html">基本輸入</option>
+			<option value="condition.html">條件式</option>
+			<option value="loop.html">迴圈式</option>
+			<option value="method.html">模糊化程式設計－方法（Method）</option>
+			<option value="string.html">字串（String）</option>
+			<option value="array.html">陣列（Array）</option>
+			<option value="basic-class.html">類別（Class）－基礎</option>
+			<option value="advanced-class.html">類別（Class）－進階</option>
+			<option value="exception.html">例外處理（Exception）</option>
+			<option value="windows.html">視窗程式設計</option>
+			<option value="low-level.html">視窗程式設計－低階事件</option>
+			<option selected="true">視窗程式設計－語意事件</option>
+			<option value="file.html">檔案處理</option>
+			<option value="media.html">繪圖與多媒體</option>
+			<option value="sever-client.html">網路程式設計</option>
+			</select>
+		</div>
+		<a name="title">.</a>
+		<br><br>
+			
+		<style>
+		p.pos_fixed
+		{
+			position:fixed;
+			bottom:5px;
+			right:5px;
+		}
+		</style>
+		<p class="pos_fixed"><a href="#title"><img src="img/home.png"width="43" height="43"></a></p>
+		
+		<hr>
+		
+		<h2><b>視窗程式設計－語意事件</b></h2>
+		語意事件是指使用者與GUI元件互動操作所產生的事件，其說明如下：<br><br>
+		<table width='550' border='1'>
+			<td align='center'><b>事件物件名稱</b></td>
+			<td align='center'><b>產生事件原因</b></td>
+			<tr>
+			<td align='center'>ActionEvent</td>
+			<td align='center'>按下按鈕、下拉式選單、密碼欄、功能表選項、<br>輸入文字方塊按下Enter時</td>
+			<tr>
+			<td align='center'>AdjustmentEvent</td>
+			<td align='center'>當移動捲動軸物件時</td>
+			<tr>
+			<td align='center'>ChangeEvent</td>
+			<td align='center'>當移動滑動軸物件時</td>
+			<tr>
+			<td align='center'>ItemEvent</td>
+			<td align='center'>當選取核取方塊、選項紐、下拉式清單和清單方塊時</td>
+			<tr>
+			<td align='center'>ListSelectionEvent</td>
+			<td align='center'>選取清單方塊時</td>
+		</table><br><br>
+		「事件來源」是指哪一個物件產生此事件，以下為語意事件的來源類別：<br><br>
+		<table width='550' border='1'>
+			<td align='center'><b>事件來源類別</b></td>
+			<td align='center'><b>產生的事件</b></td>
+			<td align='center'><b>事件傾聽者</b></td>
+			<tr>
+			<td align='center'>
+				JButton<br>
+				JRadioButton<br>
+				JCheckBox<br>
+				JTextField<br>
+				JPasswordField<br>
+				JTextArea<br>
+				JComboBox<br>
+				JMenuItem<br>
+				JCheckBoxMenuItem<br>
+				JRadioButtonMenuItem
+			</td>
+			<td align='center'>ActionEvent</td>
+			<td align='center'>ActionListener</td>
+			<tr>
+			<td align='center'>
+				JRadioButton<br>
+				JCheckBox<br>
+				JCheckBoxMenuItem<br>
+				JRadioButtonMenuItem
+			</td>
+			<td align='center'>ItemEvent</td>
+			<td align='center'>ItemListener</td>
+			<tr>
+			<td align='center'>JList</td>
+			<td align='center'>ListSelectionEvent</td>
+			<td align='center'>ListSelectionListener</td>
+			<tr>
+			<td align='center'>JScrollbar</td>
+			<td align='center'>AdjustmentEvent</td>
+			<td align='center'>AdjustmentListener</td>
+			<tr>
+			<td align='center'>JSlider</td>
+			<td align='center'>ChangeEvent</td>
+			<td align='center'>ChangeListener</td>
+		</table><br>
+		一旦類別被新增為傾聽者，該類別必須實作傾聽者介面的所有方法。<br><br>
+		傾聽者介面請參考<a href="windows.html" STYLE="text-decoration:none"><b>此章節</b></a><br><br>
+		<hr>
+		<h3>範例：</h3>
+		<ul>
+			<li><h3>按鈕、文字（JButton, JLabel）</h3>
+				<img src="img/Button-actionEvent.png" STYLE="widt:95%;height:95%"><br><br>
+				<b>輸出：</b><br><br>
+				<img src="img/Button-actionEvent-result.png" STYLE="widt:10%;height:10%"><br><br>
+			<li><h3>選項鈕（JRadioButton）</h3>
+				<img src="img/radio-actionEvent.png" STYLE="widt:105%;height:105%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li>點選是並按下按鈕<br><br>
+						<img src="img/radio-actionEvent-yes.png" STYLE="widt:10%;height:10%"><br><br>
+					<li>點選否並按下按鈕<br><br>
+						<img src="img/radio-actionEvent-no.png" STYLE="widt:10%;height:10%"><br><br>
+				</ul>
+			<li><h3>彈出式選單（JPopupMenu）</h3>
+				<img src="img/popup-actionEvent.png" STYLE="widt:100%;height:100%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li>滑鼠右鍵<br><br>
+						<img src="img/popup-actionEvent-click.png" STYLE="widt:40%;height:40%"><br><br>
+					<li>點選紅色（其他輸出類似不附上，字串新增的黃色無功能）<br><br>
+						<img src="img/popup-actionEvent-red.png" STYLE="widt:40%;height:40%"><br><br>
+				</ul>
+			<li><h3>下拉式選單（JMenuBar、JMenu、JMenuItem）</h3>
+				<img src="img/menu-actionEvent.png" STYLE="widt:150%;height:150%"><br><br>
+				<b>輸出：</b><br><br>
+				<ul>
+					<li>第一選單以及子選單開啟（並未設定點擊功能）<br><br>
+						<img src="img/menu-actionEvent-first.png" STYLE="widt:40%;height:40%"><br><br>
+					<li>第二選單開啟（點擊功能同上一範例）<br><br>
+						<img src="img/menu-actionEvent-second.png" STYLE="widt:40%;height:40%"><br><br>
+				</ul>
+	</body>
+</html>
